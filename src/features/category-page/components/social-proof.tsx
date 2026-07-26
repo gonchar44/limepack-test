@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 import Image from "next/image";
 
 import type { SocialProofContent } from "@/features/category-page/model/social-proof.types";
@@ -41,7 +41,7 @@ export function SocialProof({ content }: SocialProofProps) {
                                 className="bg-brand-500/16 text-brand-400 flex h-7 w-7 shrink-0 items-center justify-center rounded-full"
                                 aria-hidden="true"
                             >
-                                <Check className="h-4 w-4" strokeWidth={3} />
+                                <CheckIcon className="h-4 w-4" strokeWidth={3} />
                             </span>
                             <div>
                                 <div className="text-base font-semibold text-white">{value.title}</div>

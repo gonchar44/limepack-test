@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Check } from "lucide-react";
+import { CheckIcon } from "lucide-react";
 
 import { Button } from "@/shared/components/button";
 import { cn } from "@/shared/lib/cn";
@@ -20,7 +20,7 @@ export function ProductCard({ data, isRecommended }: ProductCardProps) {
         >
             {isRecommended ? (
                 <span className="bg-brand-500 text-brand-950 absolute -top-3.5 left-5 z-10 inline-flex items-center gap-1 rounded-full px-3.5 py-1.5 text-xs font-bold shadow-sm">
-                    <Check className="h-3.5 w-3.5" aria-hidden="true" />
+                    <CheckIcon className="h-3.5 w-3.5" aria-hidden="true" />
                     Recommended for you
                 </span>
             ) : null}
