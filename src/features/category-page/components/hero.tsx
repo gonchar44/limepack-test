@@ -1,4 +1,4 @@
-import { Play } from "lucide-react";
+import { PlayIcon } from "lucide-react";
 import Image from "next/image";
 
 import { Button } from "@/shared/components/button";
@@ -53,7 +53,7 @@ export function Hero({ content }: HeroProps) {
                             aria-hidden="true"
                         >
                             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-neutral-950 text-white">
-                                <Play className="ml-0.5 h-5 w-5" fill="currentColor" />
+                                <PlayIcon className="ml-0.5 h-5 w-5" fill="currentColor" />
                             </div>
                             <div className="rounded-full bg-white/90 px-3 py-1 text-sm font-semibold text-neutral-800">
                                 {content.video.label}

@@ -16,6 +16,7 @@ const catalog: ProductOption[] = [
         deliveryTime: "",
         href: "",
         recommendationReason: "",
+        image: { src: "", alt: "" },
     },
     {
         id: "bulk",
@@ -29,6 +30,7 @@ const catalog: ProductOption[] = [
         deliveryTime: "",
         href: "",
         recommendationReason: "",
+        image: { src: "", alt: "" },
     },
     {
         id: "reusable",
@@ -42,6 +44,7 @@ const catalog: ProductOption[] = [
         deliveryTime: "",
         href: "",
         recommendationReason: "",
+        image: { src: "", alt: "" },
     },
 ];
 
