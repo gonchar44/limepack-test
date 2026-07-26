@@ -5,7 +5,10 @@ export type ProductCardData = {
     title: string;
     badgeLabel: string;
     tagline: string;
-    placeholderLabel: string;
+    image: {
+        src: string;
+        alt: string;
+    };
     specs: { label: string; value: string }[];
     ctaLabel: string;
     href: string;
@@ -18,7 +21,7 @@ export function toProductCardData(product: ProductOption): ProductCardData {
         title: `${product.name} plastic cups`,
         badgeLabel: product.tag,
         tagline: product.tagline,
-        placeholderLabel: `${product.name} cup shot`,
+        image: product.image,
         specs: [
             { label: "Minimum order", value: `${product.minQuantity.toLocaleString("en-GB")} cups` },
             { label: "Indicative price", value: `${product.priceFrom}/cup` },
