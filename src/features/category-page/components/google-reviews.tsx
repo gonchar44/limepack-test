@@ -19,6 +19,10 @@ export function GoogleReviews({ content }: GoogleReviewsProps) {
         setCurrentIndex(((index % total) + total) % total);
     }
 
+    if (total === 0) {
+        return null;
+    }
+
     return (
         <section className="bg-surface-muted border-border-subtle border-t">
             <div className="mx-auto max-w-4xl px-6 py-12 sm:px-10 md:py-16">
