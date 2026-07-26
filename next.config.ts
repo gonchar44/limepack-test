@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
                 hostname: "fruitbasket.limepack.com",
                 pathname: "/img/**",
             },
+            {
+                protocol: "https",
+                hostname: "fruitbasket.limepack.com",
+                pathname: "/themes/limepack/assets/images/brands/**",
+            },
         ],
     },
 };

@@ -1,7 +1,7 @@
 export type TrustStat = {
     value: string;
     label: string;
-    emphasis?: "brand" | "neutral";
+    variant?: "stat" | "note";
 };
 
 export type TrustContent = {
