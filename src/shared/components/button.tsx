@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import { cn } from "@/shared/lib/cn";
 
 type ButtonVariant = "primary" | "secondary";
 
@@ -30,7 +31,7 @@ type ButtonAsButtonProps = ButtonBaseProps &
 type ButtonProps = ButtonAsLinkProps | ButtonAsButtonProps;
 
 export function Button({ variant = "primary", className, children, ...props }: ButtonProps) {
-    const classes = [baseClasses, variantClasses[variant], className].filter(Boolean).join(" ");
+    const classes = cn(baseClasses, variantClasses[variant], className);
 
     if (props.href !== undefined) {
         const { href, ...linkProps } = props;
@@ -43,7 +44,7 @@ export function Button({ variant = "primary", className, children, ...props }: B
 
     const { type = "button", ...buttonProps } = props;
     return (
-        <button type={type} className={`${classes} disabled:cursor-not-allowed disabled:opacity-50`} {...buttonProps}>
+        <button type={type} className={cn(classes, "disabled:cursor-not-allowed disabled:opacity-50")} {...buttonProps}>
             {children}
         </button>
     );
