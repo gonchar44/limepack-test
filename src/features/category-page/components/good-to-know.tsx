@@ -20,7 +20,10 @@ export function GoodToKnow({ content }: GoodToKnowProps) {
                     {content.heading}
                 </h2>
             </div>
-            <Accordion items={accordionItems} defaultOpenIds={[accordionItems[0].id]} />
+            <Accordion
+                items={accordionItems}
+                defaultOpenIds={accordionItems.length > 0 ? [accordionItems[0].id] : []}
+            />
         </section>
     );
 }
