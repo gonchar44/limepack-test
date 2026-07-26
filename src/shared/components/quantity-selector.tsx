@@ -1,5 +1,7 @@
 "use client";
 
+import { cn } from "@/shared/lib/cn";
+
 type QuantitySelectorProps = {
     name: string;
     legend: string;
@@ -29,10 +31,8 @@ export function QuantitySelector({
     formatValue = defaultFormatValue,
     className,
 }: QuantitySelectorProps) {
-    const wrapperClasses = ["flex flex-col gap-4", className].filter(Boolean).join(" ");
-
     return (
-        <div className={wrapperClasses}>
+        <div className={cn("flex flex-col gap-4", className)}>
             <fieldset className="flex flex-wrap gap-2">
                 <legend className="sr-only">{legend}</legend>
                 {presets.map((preset) => (

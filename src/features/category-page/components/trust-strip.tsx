@@ -1,5 +1,6 @@
 import { CircleCheck } from "lucide-react";
 import type { TrustContent } from "@/features/category-page/model/trust.types";
+import { cn } from "@/shared/lib/cn";
 
 type TrustStripProps = {
     content: TrustContent;
@@ -18,9 +19,10 @@ export function TrustStrip({ content }: TrustStripProps) {
                             />
                             <div>
                                 <p
-                                    className={`text-xl font-bold md:text-2xl ${
-                                        stat.emphasis === "brand" ? "text-brand-500" : "text-white"
-                                    }`}
+                                    className={cn("text-xl font-bold md:text-2xl", {
+                                        "text-brand-500": stat.emphasis === "brand",
+                                        "text-white": stat.emphasis !== "brand",
+                                    })}
                                 >
                                     {stat.value}
                                 </p>

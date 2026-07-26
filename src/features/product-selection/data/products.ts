@@ -1,0 +1,55 @@
+import type { ProductOption } from "@/features/product-selection/model/product.types";
+
+export const cupProducts: ProductOption[] = [
+    {
+        id: "bestseller",
+        name: "Bestseller",
+        tag: "Most popular",
+        tagline: "Versatile cups for smaller runs, simpler prints and short deadlines.",
+        bestFor: "Lower quantities & flexibility",
+        minQuantity: 1000,
+        priceFrom: "£0.16",
+        printColours: "Up to 4 colours",
+        deliveryTime: "9–10 working days",
+        href: "https://www.limepack.co.uk/branded-plastic-cups/290-printed-plastic-cups.html",
+        recommendationReason: "The fastest turnaround with a low 1,000-cup minimum — ideal at this quantity.",
+        image: {
+            src: "https://fruitbasket.limepack.com/5729-medium_default/printed-plastic-cups.jpg?width=400",
+            alt: "Plastic cups Bestseller",
+        },
+    },
+    {
+        id: "bulk",
+        name: "Bulk",
+        tag: "Best price",
+        tagline: "The lowest unit price and advanced multi-colour printing at scale.",
+        bestFor: "Large quantities & lowest price",
+        minQuantity: 10000,
+        priceFrom: "£0.09",
+        printColours: "Up to 6 colours",
+        deliveryTime: "~16 weeks",
+        href: "https://www.limepack.co.uk/branded-plastic-cups/250-plastic-cups-wholesale.html",
+        recommendationReason: "At 10,000+ cups you unlock our lowest unit price and 6-colour printing.",
+        image: {
+            src: "https://fruitbasket.limepack.com/4843-medium_default/plastic-cups-wholesale.jpg?width=400",
+            alt: "Plastic cups Bulk",
+        },
+    },
+    {
+        id: "reusable",
+        name: "Reusable",
+        tag: "Durable",
+        tagline: "Sturdy cups you can wash and reuse — made for events and venues.",
+        bestFor: "Events, venues & reuse",
+        minQuantity: 552,
+        priceFrom: "£0.42",
+        printColours: "Full-colour print",
+        deliveryTime: "within 6 weeks",
+        href: "https://www.limepack.co.uk/branded-plastic-cups/284-personalised-reusable-plastic-cups.html",
+        recommendationReason: "Durable, washable cups — the right call for events, venues and greener service.",
+        image: {
+            src: "https://fruitbasket.limepack.com/5652-medium_default/personalised-reusable-plastic-cups.jpg?width=400",
+            alt: "Reusable Plastic cups",
+        },
+    },
+];
