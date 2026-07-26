@@ -70,6 +70,7 @@ export function Accordion({ items, defaultOpenIds = [], allowMultiple = true, cl
                             id={panelId}
                             role="region"
                             aria-labelledby={buttonId}
+                            aria-hidden={!isOpen}
                             className={cn(
                                 "grid transition-[grid-template-rows] duration-200 ease-out motion-reduce:transition-none",
                                 isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
