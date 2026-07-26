@@ -8,7 +8,7 @@ import { cupsSocialProofContent } from "@/features/category-page/data/social-pro
 import { cupsTrustContent } from "@/features/category-page/data/trust-content";
 import { CupMatcher } from "@/features/product-selection/components/cup-matcher";
 
-export default function Home() {
+export default function PlasticCupsCategoryPage() {
     return (
         <main>
             <Hero content={cupsHeroContent} />
