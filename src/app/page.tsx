@@ -1,24 +1,24 @@
-import { Button } from "@/shared/components/button";
+import { GoodToKnow } from "@/features/category-page/components/good-to-know";
+import { GoogleReviews } from "@/features/category-page/components/google-reviews";
+import { Hero } from "@/features/category-page/components/hero";
+import { SocialProof } from "@/features/category-page/components/social-proof";
+import { TrustStrip } from "@/features/category-page/components/trust-strip";
+import { cupsGoodToKnowContent } from "@/features/category-page/data/good-to-know-content";
+import { cupsHeroContent } from "@/features/category-page/data/hero-content";
+import { cupsReviewsContent } from "@/features/category-page/data/reviews-content";
+import { cupsSocialProofContent } from "@/features/category-page/data/social-proof-content";
+import { cupsTrustContent } from "@/features/category-page/data/trust-content";
+import { CupMatcher } from "@/features/product-selection/components/cup-matcher";
 
-export default function Home() {
+export default function PlasticCupsCategoryPage() {
     return (
-        <main className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6 py-16">
-            <p className="text-brand-600 mb-3 text-sm font-medium tracking-wide uppercase">Limepack prototype</p>
-            <h1 className="max-w-3xl text-4xl leading-tight font-semibold text-neutral-950 md:text-6xl">
-                Custom printed plastic cups
-            </h1>
-            <p className="text-ink-secondary mt-6 max-w-2xl text-lg leading-8">
-                This scaffold is ready for the category page implementation. Product selection components, product data,
-                and recommendation logic will be added in the next step.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-                <Button href="#matcher" variant="primary">
-                    Find your cup →
-                </Button>
-                <Button href="#products" variant="secondary">
-                    Compare the 3 options
-                </Button>
-            </div>
+        <main>
+            <Hero content={cupsHeroContent} />
+            <TrustStrip content={cupsTrustContent} />
+            <CupMatcher />
+            <SocialProof content={cupsSocialProofContent} />
+            <GoodToKnow content={cupsGoodToKnowContent} />
+            <GoogleReviews content={cupsReviewsContent} />
         </main>
     );
 }
