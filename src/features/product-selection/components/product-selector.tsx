@@ -1,29 +1,31 @@
-"use client";
-
-import { useState } from "react";
-
 import { Button } from "@/shared/components/button";
 import { QuantitySelector } from "@/shared/components/quantity-selector";
 import { SegmentedControl } from "@/shared/components/segmented-control";
-import { cupProducts } from "@/features/product-selection/data/products";
-import { recommendProduct } from "@/features/product-selection/model/recommend-product";
-import type { UsageMode } from "@/features/product-selection/model/product.types";
+import type { ProductOption, UsageMode } from "@/features/product-selection/model/product.types";
 
-const QUANTITY_PRESETS = [500, 1000, 5000, 10000, 25000, 50000];
-const QUANTITY_MIN = 100;
-const QUANTITY_MAX = 100000;
-const QUANTITY_STEP = 100;
-const DEFAULT_QUANTITY = 5000;
+export const QUANTITY_PRESETS = [500, 1000, 5000, 10000, 25000, 50000];
+export const QUANTITY_MIN = 100;
+export const QUANTITY_MAX = 100000;
+export const QUANTITY_STEP = 100;
+export const DEFAULT_QUANTITY = 5000;
 
-const formatQuantity = (value: number) => value.toLocaleString("en-GB");
+export const formatQuantity = (value: number) => value.toLocaleString("en-GB");
 
-export function ProductSelector() {
-    const [usage, setUsage] = useState<UsageMode>("single-use");
-    const [quantity, setQuantity] = useState(DEFAULT_QUANTITY);
+type ProductSelectorProps = {
+    usage: UsageMode;
+    quantity: number;
+    onUsageChange: (usage: UsageMode) => void;
+    onQuantityChange: (quantity: number) => void;
+    recommended: ProductOption;
+};
 
-    const recommendedId = recommendProduct({ usage, quantity });
-    const recommended = cupProducts.find((product) => product.id === recommendedId) ?? cupProducts[0];
-
+export function ProductSelector({
+    usage,
+    quantity,
+    onUsageChange,
+    onQuantityChange,
+    recommended,
+}: ProductSelectorProps) {
     const contextLabel = usage === "reusable" ? "reusable cups" : `${formatQuantity(quantity)} single-use cups`;
 
     return (
@@ -43,7 +45,7 @@ export function ProductSelector() {
                             name="usage-mode"
                             legend="How will the cups be used?"
                             value={usage}
-                            onChange={setUsage}
+                            onChange={onUsageChange}
                             options={[
                                 { value: "single-use", label: "Single-use" },
                                 { value: "reusable", label: "Reusable" },
@@ -57,7 +59,7 @@ export function ProductSelector() {
                             name="quantity"
                             legend="Roughly how many cups do you need?"
                             value={quantity}
-                            onChange={setQuantity}
+                            onChange={onQuantityChange}
                             min={QUANTITY_MIN}
                             max={QUANTITY_MAX}
                             step={QUANTITY_STEP}
