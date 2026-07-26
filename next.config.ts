@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
             {
                 protocol: "https",
                 hostname: "fruitbasket.limepack.com",
-                pathname: "/img/**",
+                pathname: "/**",
             },
             {
                 protocol: "https",

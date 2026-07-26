@@ -13,6 +13,10 @@ export const cupProducts: ProductOption[] = [
         deliveryTime: "9–10 working days",
         href: "https://www.limepack.co.uk/branded-plastic-cups/290-printed-plastic-cups.html",
         recommendationReason: "The fastest turnaround with a low 1,000-cup minimum — ideal at this quantity.",
+        image: {
+            src: "https://fruitbasket.limepack.com/5729-medium_default/printed-plastic-cups.jpg?width=400",
+            alt: "Plastic cups Bestseller",
+        },
     },
     {
         id: "bulk",
@@ -26,6 +30,10 @@ export const cupProducts: ProductOption[] = [
         deliveryTime: "~16 weeks",
         href: "https://www.limepack.co.uk/branded-plastic-cups/250-plastic-cups-wholesale.html",
         recommendationReason: "At 10,000+ cups you unlock our lowest unit price and 6-colour printing.",
+        image: {
+            src: "https://fruitbasket.limepack.com/4843-medium_default/plastic-cups-wholesale.jpg?width=400",
+            alt: "Plastic cups Bulk",
+        },
     },
     {
         id: "reusable",
@@ -39,5 +47,9 @@ export const cupProducts: ProductOption[] = [
         deliveryTime: "within 6 weeks",
         href: "https://www.limepack.co.uk/branded-plastic-cups/284-personalised-reusable-plastic-cups.html",
         recommendationReason: "Durable, washable cups — the right call for events, venues and greener service.",
+        image: {
+            src: "https://fruitbasket.limepack.com/5652-medium_default/personalised-reusable-plastic-cups.jpg?width=400",
+            alt: "Reusable Plastic cups",
+        },
     },
 ];

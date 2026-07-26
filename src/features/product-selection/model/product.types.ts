@@ -14,4 +14,8 @@ export type ProductOption = {
     deliveryTime: string;
     href: string;
     recommendationReason: string;
+    image: {
+        src: string;
+        alt: string;
+    };
 };

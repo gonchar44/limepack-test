@@ -3,8 +3,8 @@ import { QuantitySelector } from "@/shared/components/quantity-selector";
 import { SegmentedControl } from "@/shared/components/segmented-control";
 import type { ProductOption, UsageMode } from "@/features/product-selection/model/product.types";
 
-export const QUANTITY_PRESETS = [500, 1000, 5000, 10000, 25000, 50000];
-export const QUANTITY_MIN = 100;
+export const QUANTITY_PRESETS = [1000, 5000, 10000, 25000, 50000];
+export const QUANTITY_MIN = 1000;
 export const QUANTITY_MAX = 100000;
 export const QUANTITY_STEP = 100;
 export const DEFAULT_QUANTITY = 5000;

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Check } from "lucide-react";
 
 import { Button } from "@/shared/components/button";
@@ -24,14 +25,17 @@ export function ProductCard({ data, isRecommended }: ProductCardProps) {
                 </span>
             ) : null}
 
-            <div
-                aria-hidden="true"
-                className="border-border-subtle relative flex h-44 items-center justify-center overflow-hidden rounded-t-[calc(1.5rem-1px)] border-b bg-[repeating-linear-gradient(135deg,var(--color-surface-muted)_0,var(--color-surface-muted)_12px,var(--color-border-subtle)_12px,var(--color-border-subtle)_24px)]"
-            >
+            <div className="border-border-subtle bg-surface-muted relative h-44 overflow-hidden rounded-t-[calc(1.5rem-1px)] border-b">
+                <Image
+                    src={data.image.src}
+                    alt={data.image.alt}
+                    fill
+                    sizes="(min-width: 1200px) 357px, (min-width: 1000px) 297px, (min-width: 800px) 358px, calc(46.88vw - 8px)"
+                    className="object-cover"
+                />
                 <span className="border-border text-brand-700 absolute top-3 left-3 rounded-full border bg-white px-2.5 py-1 text-xs font-bold">
                     {data.badgeLabel}
                 </span>
-                <span className="text-ink-secondary font-mono text-xs tracking-wide">{data.placeholderLabel}</span>
             </div>
 
             <div className="flex flex-1 flex-col p-6">
