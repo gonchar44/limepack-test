@@ -4,6 +4,8 @@ Responsive frontend prototype for Limepack's custom printed plastic cups
 category page. The project includes a guided cup matcher, product comparison,
 trust content, supporting product information, and customer reviews.
 
+**[→ Live Site](https://limepack-test.vercel.app/)**
+
 ## Tech stack
 
 - Next.js 16 with the App Router
